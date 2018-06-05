@@ -15,6 +15,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
 /**
  * @GraphQLField(
  *   id = "url_metatags",
+ *   secure = true,
  *   name = "metatags",
  *   type = "[Metatag]",
  *   parents = {"InternalUrl", "EntityCanonicalUrl"}

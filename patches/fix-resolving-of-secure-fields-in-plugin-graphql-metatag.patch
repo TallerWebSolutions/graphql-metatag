@@ -1,0 +1,48 @@
+diff --git a/src/Plugin/GraphQL/Fields/Entity/EntityMetatags.php b/src/Plugin/GraphQL/Fields/Entity/EntityMetatags.php
+index 362c169..b41202c 100644
+--- a/src/Plugin/GraphQL/Fields/Entity/EntityMetatags.php
++++ b/src/Plugin/GraphQL/Fields/Entity/EntityMetatags.php
+@@ -14,6 +14,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
+ /**
+  * @GraphQLField(
+  *   id = "entity_metatags",
++ *   secure = true,
+  *   name = "entityMetatags",
+  *   type = "[Metatag]",
+  *   parents = {"Entity"}
+diff --git a/src/Plugin/GraphQL/Fields/InternalUrl/Metatags.php b/src/Plugin/GraphQL/Fields/InternalUrl/Metatags.php
+index f02e54b..40c6030 100644
+--- a/src/Plugin/GraphQL/Fields/InternalUrl/Metatags.php
++++ b/src/Plugin/GraphQL/Fields/InternalUrl/Metatags.php
+@@ -15,6 +15,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
+ /**
+  * @GraphQLField(
+  *   id = "url_metatags",
++ *   secure = true,
+  *   name = "metatags",
+  *   type = "[Metatag]",
+  *   parents = {"InternalUrl", "EntityCanonicalUrl"}
+diff --git a/src/Plugin/GraphQL/Fields/Metatag/Key.php b/src/Plugin/GraphQL/Fields/Metatag/Key.php
+index ff204e7..fdc2c74 100644
+--- a/src/Plugin/GraphQL/Fields/Metatag/Key.php
++++ b/src/Plugin/GraphQL/Fields/Metatag/Key.php
+@@ -9,6 +9,7 @@ use GraphQL\Type\Definition\ResolveInfo;
+ /**
+  * @GraphQLField(
+  *   id = "metatag_key",
++ *   secure = true,
+  *   name = "key",
+  *   type = "String",
+  *   parents = {"Metatag"}
+diff --git a/src/Plugin/GraphQL/Fields/Metatag/Value.php b/src/Plugin/GraphQL/Fields/Metatag/Value.php
+index 609c4ec..5fae948 100644
+--- a/src/Plugin/GraphQL/Fields/Metatag/Value.php
++++ b/src/Plugin/GraphQL/Fields/Metatag/Value.php
+@@ -9,6 +9,7 @@ use GraphQL\Type\Definition\ResolveInfo;
+ /**
+  * @GraphQLField(
+  *   id = "metatag_value",
++ *   secure = true,
+  *   name = "value",
+  *   type = "String",
+  *   parents = {"Metatag"}
