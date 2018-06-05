@@ -81,7 +81,7 @@ class Metatags extends FieldPluginBase implements ContainerFactoryPluginInterfac
 
       return function ($value, array $args, ResolveContext $context, ResolveInfo $info) use ($resolve) {
         $tags = $resolve();
-        foreach ($tags as $tag) {
+        foreach ($tags->getValue() as $tag) {
           yield $tag;
         }
       };

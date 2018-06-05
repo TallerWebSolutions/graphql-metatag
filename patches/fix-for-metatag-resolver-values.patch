@@ -1,0 +1,13 @@
+diff --git a/src/Plugin/GraphQL/Fields/InternalUrl/Metatags.php b/src/Plugin/GraphQL/Fields/InternalUrl/Metatags.php
+index f02e54b..cf796ba 100644
+--- a/src/Plugin/GraphQL/Fields/InternalUrl/Metatags.php
++++ b/src/Plugin/GraphQL/Fields/InternalUrl/Metatags.php
+@@ -81,7 +81,7 @@ class Metatags extends FieldPluginBase implements ContainerFactoryPluginInterfac
+ 
+       return function ($value, array $args, ResolveContext $context, ResolveInfo $info) use ($resolve) {
+         $tags = $resolve();
+-        foreach ($tags as $tag) {
++        foreach ($tags->getValue() as $tag) {
+           yield $tag;
+         }
+       };
